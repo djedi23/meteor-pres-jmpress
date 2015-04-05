@@ -1,0 +1,34 @@
+<template name="presentation">
+  <div class="jmpress">
+    {{> Template.contentBlock}}
+    {{> runHooks 'template.presentation.extraSlides'}}
+  </div>
+</template>
+
+<template name="slide">
+  <div class="step slide {{style}}" draggable="{{draggable}}"
+       id="{{id}}"
+       data-x="{{x}}"
+       data-y="{{y}}"
+       data-z="{{z}}"
+       data-r="{{r}}"
+       data-phi="{{phi}}"
+       data-scale="{{scale}}"
+       data-scale-x="{{scaleX}}"
+       data-scale-y="{{scaleY}}"
+       data-scale-z="{{scaleZ}}"
+       data-rotate="{{rotate}}"
+       data-rotate-x="{{rotateX}}"
+       data-rotate-y="{{rotateY}}"
+       data-rotate-z="{{rotateZ}}"
+       data-delegate="{{delegate}}"
+       data-src="{{src}}"
+       data-exclude="{{exclude}}"
+       data-next="{{#if next}}#{{next}}{{/if}}"
+       data-prev="{{#if prev}}#{{prev}}{{/if}}"
+       data-template="{{template}}"
+       data-jmpress="{{jmpress}}"
+       >
+    <q>{{> Template.contentBlock}}</q>
+  </div>
+</template>
