@@ -16,8 +16,8 @@ Package.onUse(function(api) {
   api.use(['templating',
       'jquery',
       'reactive-var',
-      'djedi:modules',
-      'djedi:jmpress'], 'client');
+      'djedi:modules@0.1.0',
+      'djedi:jmpress@0.4.5'], 'client');
 
   api.addFiles(['client/pres-jmpress.html',
                'client/pres-jmpress.js'],
@@ -26,6 +26,6 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('pres-jmpress');
+  api.use('djedi:pres-jmpress');
   api.addFiles('pres-jmpress-tests.js');
 });
