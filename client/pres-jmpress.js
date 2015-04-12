@@ -73,7 +73,7 @@ Template.presentation.rendered = function() {
   modules.calls('template.presentation.rendered',this);
   
   if (! modules.presentation.settings.keyboard.use) // Suppress swipe on mobile if not speaker
-    $(document).unbind($('.jmpress').jmpress('current').mobileNamespace);
+    $(document).unbind("touchend"+$('.jmpress').jmpress('current').mobileNamespace);
 };
 
 Template.presentation.destroyed = function() {
